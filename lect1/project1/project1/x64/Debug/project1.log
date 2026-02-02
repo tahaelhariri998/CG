@@ -1,0 +1,4 @@
+﻿glew32s.lib(glew.obj) : warning LNK4099: PDB 'glew32s.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\taha\Desktop\عملي البيانيات\lect1\project1\x64\Debug\glew32s.pdb'; linking object as if no debug info
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  project1.vcxproj -> C:\Users\taha\Desktop\عملي البيانيات\lect1\project1\x64\Debug\project1.exe
