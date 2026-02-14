@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\lect2\\project2\\",
+  "WorkspaceRootPath": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\repo\\lect2\\project2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6337B1CD-8BFA-488D-B135-EFD134D9D12A}|project1\\project1.vcxproj|C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\lect2\\project2\\project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{6337B1CD-8BFA-488D-B135-EFD134D9D12A}|project1\\project1.vcxproj|C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\repo\\lect2\\project2\\project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6337B1CD-8BFA-488D-B135-EFD134D9D12A}|project1\\project1.vcxproj|solutionrelative:project1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\lect2\\project2\\project1\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\repo\\lect2\\project2\\project1\\main.cpp",
               "RelativeDocumentMoniker": "project1\\main.cpp",
-              "ToolTip": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\lect2\\project2\\project1\\main.cpp",
+              "ToolTip": "C:\\Users\\taha\\Desktop\\\u0639\u0645\u0644\u064A \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0627\u062A\\repo\\lect2\\project2\\project1\\main.cpp",
               "RelativeToolTip": "project1\\main.cpp",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAALMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-01-30T17:06:56.076Z",
               "EditorCaption": ""
