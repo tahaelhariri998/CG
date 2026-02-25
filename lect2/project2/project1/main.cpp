@@ -14,20 +14,31 @@ const unsigned int SCR_HEIGHT = 600;
 
 // A. كود Vertex Shader
 // وظيفته: تحديد موقع رؤوس المثلث في الفضاء
-const char* vertexShaderSource = "#version 330 core\n"
-"layout (location = 0) in vec3 aPos;\n" // نستقبل البيانات في الموقع 0
+const char* vertexShaderSource = "#version 330 core \n"
+"layout(location = 0) in vec3 aPos; \n"// المدخل (الموقع)
+
+"out vec4 vertexColor; \n"// مخرج: سنرسل هذا اللون للشيدر التالي
+
 "void main()\n"
 "{\n"
-"   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n" // نمرر الموقع كما هو
-"}\0";
-
+"gl_Position = vec4(aPos, 1.0);\n"
+" vertexColor = vec4(0.5, 0.0, 0.0, 1.0);\n" // حددنا لوناً أحمر غامقاً
+"}";
 // B. كود Fragment Shader
 // وظيفته: تحديد لون البكسلات (هنا برتقالي)
 const char* fragmentShaderSource = "#version 330 core\n"
 "out vec4 FragColor;\n"
+"in vec4 vertexColor; \n" // مدخل: يجب أن يطابق الاسم والنوع في Vertex Shader
+"uniform vec4 ourColor; \n" // متغير نتحكم به من C++
+
 "void main()\n"
 "{\n"
-"   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n" // RGBA: برتقالي
+//" vec4 originalColor = vec4(1.0, 0.0, 0.0, 1.0);\n"
+
+//"       FragColor = originalColor.bgra; \n" // RGBA: برتقالي
+//"FragColor = vertexColor; \n"// استخدم اللون القادم
+"FragColor = ourColor; \n"
+
 "}\n\0";
 
 // دالة لمعالجة تغيير حجم النافذة من قبل المستخدم
@@ -162,10 +173,28 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // ج. الرسم
-        glUseProgram(shaderProgram); // تفعيل الشيدر
-        glBindVertexArray(VAO); // تفعيل كائن المثلث
-        glDrawArrays(GL_TRIANGLES, 0, 3); // ارسم مثلثاً من 3 رؤوس
+        //glUseProgram(shaderProgram); // تفعيل الشيدر
+        //glBindVertexArray(VAO); // تفعيل كائن المثلث
+        //glDrawArrays(GL_TRIANGLES, 0, 3); // ارسم مثلثاً من 3 رؤوس
         // glBindVertexArray(0); // لا داعي لفك الربط في كل فريم
+
+        // 1. احصل على الوقت بالثواني
+        float timeValue = glfwGetTime();
+        // 2. احسب قيمة اللون الأخضر (تتموج بين 0 و 1 باستخدام الجيب sin)
+        float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+
+        // 3. احصل على عنوان المتغير في الشيدر
+        // ملاحظة: shaderProgram هو المتغير الذي أنشأناه سابقاً
+        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+
+        // 4. تفعيل الشيدر وإرسال القيمة
+        glUseProgram(shaderProgram);
+        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
+
+        // 5. ارسم المثلث
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
 
         // د. تبديل الـ Buffers ومعالجة الأحداث
         glfwSwapBuffers(window);
